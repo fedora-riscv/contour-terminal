@@ -8,7 +8,7 @@ License:        Apache-2.0
 URL:            https://github.com/contour-terminal/contour
 Source0:        %{url}/archive/v%{version}/contour-%{version}.tar.gz
 
-ExcludeArch:    s390x i686 ppc64le
+ExcludeArch:    s390x i686 ppc64le armv7hl
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake
