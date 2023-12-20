@@ -5,6 +5,8 @@ downstream_package_name: contour-terminal
 
 specfile_path: contour-terminal.spec
 
+upstream_tag_template: v{version}
+
 jobs:
   - job: pull_from_upstream
     trigger: release
