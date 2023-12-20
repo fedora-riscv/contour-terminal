@@ -1,0 +1,22 @@
+upstream_package_name: contour
+upstream_project_url: https://github.com/contour-terminal/contour
+
+downstream_package_name: contour-terminal
+
+specfile_path: contour-terminal.spec
+
+jobs:
+  - job: pull_from_upstream
+    trigger: release
+    dist_git_branches:
+      - rawhide
+
+  - job: koji_build
+    trigger: commit
+    dist_git_branches:
+      - rawhide
+
+  - job: bodhi_update
+    trigger: commit
+    dist_git_branches:
+      - rawhide
